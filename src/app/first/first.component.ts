@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FirstComponent {
 
-  title = 'student survey form';
+  title = 'Student Survey Form';
   // readonly ROOT_URL = "https://jsonplaceholder.typicode.com";
   public validity: string = "";
 
