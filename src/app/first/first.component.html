@@ -152,7 +152,7 @@
                 <option *ngFor="let like of likes">{{like}}</option>
             </select>
             <div *ngIf="f.likelihood.touched && f.likelihood.invalid" class="alert alert-danger">
-                <div *ngIf="f.likelihood.errors.required">Name is required.</div>
+                <div *ngIf="f.likelihood.errors.required">Please select an option.</div>
             </div>
         </div>
 
