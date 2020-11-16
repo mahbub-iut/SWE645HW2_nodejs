@@ -13,6 +13,7 @@ export class FirstComponent {
 
   title = 'student survey form';
   // readonly ROOT_URL = "https://jsonplaceholder.typicode.com";
+  public validity: string = "";
 
   readonly ROOT_URL = "http://35.224.162.205/surveywebjpa-RestAPI/rest/surveys/new";
   readonly proxyurl = "https://cors-anywhere.herokuapp.com/";
@@ -72,7 +73,7 @@ export class FirstComponent {
 
   submitForm() {
 
-    console.log(this.angForm.value);
+    // console.log(this.angForm.value);
     if (this.angForm.valid) {
       this.http.post(this.proxyurl + this.ROOT_URL, this.angForm.value, { responseType: 'text' }).subscribe(
         (response) => console.log(response),

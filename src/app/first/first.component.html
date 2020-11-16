@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
 <div style="text-align:center">
+    
     <h1>
-        Welcome to {{title}} app!!
+        Welcome to {{title}} !!
     </h1>
     <form [formGroup]="angForm" novalidate>
         <div class="form-group">
@@ -117,21 +119,21 @@
             </label>
             <div>
                 <input id="friends" type="radio" value="friends" name="interested" formControlName="interested">
-                <label for="friends">friends</label>
+                <label for="friends">Friends</label>
             </div>
             <div>
                 <input id="television" type="radio" value="television" name="interested" formControlName="interested">
-                <label for="television">television</label>
+                <label for="television">Television</label>
             </div>
 
             <div>
                 <input id="internet" type="radio" value="internet" name="interested" formControlName="interested">
-                <label for="internet">internet</label>
+                <label for="internet">Internet</label>
             </div>
 
             <div>
                 <input id="other" type="radio" value="other" name="interested" formControlName="interested">
-                <label for="other">other</label>
+                <label for="other">Other</label>
             </div>
 
             <div *ngIf="f.interested.touched && f.interested.invalid" class="alert alert-danger">
@@ -188,6 +190,11 @@
     </form>
     <!-- <p>Form value: {{ angForm.value | json }}</p> -->
     <p>The form is {{ angForm.status | json }}. </p>
+
+    <div *ngIf="angForm.status=='INVALID'"><h5>You still can't submit the form</h5> </div>
+    <div *ngIf="angForm.status=='VALID'"><h5>You can submit the form!!!</h5> </div>
+
+
 </div>
 
 
