@@ -1,0 +1,46 @@
+SWE 645 Assignment 3 (Mahbubul Alam Palash & TAseef Rahman)
+
+Technologies Used:
+1. JAVA Maven
+2. JAVA JPA
+3. Jersey
+4. Java Dynamic Web Project
+5. ANGULAR
+6. GKE
+
+Speciual Note: We have completed the bonus mark job creating mysql container with PV and PVC in GKE and used that in our assignemnt.
+
+
+How to run ResT API Project:
+
+A Maven java Dynamic Web project has been created to implement the
+Java Rest API to enter new survey information and retrieve all the
+survey information. The Java Web project uses java JPA to enter and
+retrieve values to and from the mysql database deployed in a Google
+Kubernetes Engine container.
+
+Just extract the project and open in Eclipse. Then run in a server and select tomcat9 to run the server . Links of project already deployed in GKE is:
+
+Getting all surveys:
+http://35.224.162.205/surveywebjpa-RestAPI/rest/surveys/allsurvey
+To enter new Survey data:
+http://35.224.162.205/surveywebjpa-RestAPI/rest/surveys/new
+
+
+
+How to run ResT API Project:
+
+Extract project from github link then either create a docker image with Docker file and run in a container. Or it can be loaded downloaded and run using Angular cli commands:
+ng serve -o --poll=2000
+
+
+
+The links of the Angular app deployed in GKE is :
+http://35.188.166.111
+
+
+Pesonal profile Link:
+
+Mahbubul Alam Palash :http://palashgmu.com.s3-website.us-east-2.amazonaws.com/
+
+Taseef Rahman:
