@@ -13,4 +13,4 @@ RUN npm run build --prod
 FROM nginx:1.15.8-alpine
 
 COPY --from=builder /src/app/dist/studentApp3/ /usr/share/nginx/html
-EXPOSE 4200
+
