@@ -33,7 +33,7 @@ pipeline{
 		
 	stage(' Deploying to GKE as single pod'){
 		steps{
-			sh ' kubectl set image  deployment/swe645angular-app swe645angular-appcontainer=gmu645/surveyangular2:${BUILD_ID}'
+			sh ' kubectl set image  deployment/swe645angular-app swe645angular-app=gmu645/surveyangular2:${BUILD_ID}'
 			
 		}
 
