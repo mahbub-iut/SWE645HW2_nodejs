@@ -2,13 +2,26 @@
 <button (click)="getPosts()">Get previous forms</button>
 
 <!-- <div *ngFor="let post of posts |async">
-  <p>user id are {{post|json}} </p>
+  <p> {{post|json}} </p>
 
 </div> -->
 <table>
 <tr *ngFor="let post of posts|async">
-  <td>{{post.body}}</td>
-  <td>{{post.id}}</td>
+  <td>Student id - {{post.id}}</td>
+  <td>First name - {{post.first_name}}</td>
+  <td>Last name- {{post.last_name}}</td>
+  <td>Address -{{post.address}}</td>
+  <td>City- {{post.city}}</td>
+  <td>State -{{post.state}}</td>
+  <td>Zip -{{post.zip}}</td>
+  <td>Telephone number- {{post.tel_num}}</td>
+  <td>Likings -{{post.likings}}</td>
+  <td>What made him/her interested -{{post.interested}}</td>
+  <td>Likelihood of recommendation -{{post.likelihood}}</td>
+  <td>Date of survey-{{post.dos}}</td>
+
+  
+
 
 </tr>
 </table>

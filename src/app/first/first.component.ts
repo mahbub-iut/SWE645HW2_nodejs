@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -9,11 +9,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './first.component.html',
   styleUrls: ['./first.component.css']
 })
-export class FirstComponent  {
+export class FirstComponent {
 
   title = 'student survey form';
-  readonly ROOT_URL = "https://jsonplaceholder.typicode.com";
-  // readonly ROOT_URL = "http://35.223.108.225/surveywebjpa-RestAPI/rest/surveys/new";
+  // readonly ROOT_URL = "https://jsonplaceholder.typicode.com";
+
+  readonly ROOT_URL = "http://35.224.162.205/surveywebjpa-RestAPI/rest/surveys/new";
+  readonly proxyurl = "https://cors-anywhere.herokuapp.com/";
   posts: Observable<any[]> | undefined;
   angForm: FormGroup;
   websiteList: any = [
@@ -64,15 +66,15 @@ export class FirstComponent  {
 
 
 
-  
+
 
 
 
   submitForm() {
 
-    // console.log(this.angForm.value);
+    console.log(this.angForm.value);
     if (this.angForm.valid) {
-      this.http.post(this.ROOT_URL+'/posts' , this.angForm.value).subscribe(
+      this.http.post(this.proxyurl + this.ROOT_URL, this.angForm.value, { responseType: 'text' }).subscribe(
         (response) => console.log(response),
         (error) => console.log(error)
       )
