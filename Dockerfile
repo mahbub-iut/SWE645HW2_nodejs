@@ -1,3 +1,5 @@
+#Docker File ton create Angular app image
+#Palash & Taseef
 FROM node:12.16.1-alpine As builder
 
 WORKDIR /src/app
