@@ -25,7 +25,7 @@ export class FirstComponent {
     { id: 3, name: 'Campus' },
     { id: 4, name: 'Dorm' },
     { id: 5, name: 'Atmsosphere' },
-    { id: 6, name: 'Campus' },
+    { id: 6, name: 'Sports' },
   ];
 
   likes: any = ['Very likely', 'Likely', 'Unlikely'];
